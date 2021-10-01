@@ -1,0 +1,89 @@
+<div class="container-fluid d-flex align-items" style="height: 91vh;">
+  <div class="row">
+    <div class="col-12 col-lg-12 bg-gray  d-flex justify-content-center py-4 py-lg-0 flex-column">
+      
+      <span class="mt-md-0 mx-3" id="register">
+        Editar Perfil
+      </span>
+
+      <form [formGroup]='userForm' class="row mt-3 mx-3">
+        <div class="col-md-6">
+          <label>E-mail:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='mail' matInput type="email">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6">
+          <label>Fecha de Nacimiento:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='bornDate' matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label>Contraseña:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='password' matInput [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+          </mat-form-field>
+
+        </div>
+        <div class="col-12 col-md-6">
+          <label>Sexo:</label>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName='gender'>
+              <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                {{gender.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label>Nombre:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='firstName' matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label>Apellido Paterno:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='lastName' matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label>Apellido Materno:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='lastName2' matInput type="text">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6">
+          <label>Tarjeta:</label>
+          <mat-form-field appearance="outline">
+            <input formControlName='card' matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 col-md-6">
+
+        </div>
+
+        <div class="col-12 col-md-6">
+
+
+          <button (click)="saveChanges()" type="button" style="background-color: #F5093E; color: white;" class="btn w-100">
+            <span style="font-size: 1em;">
+              Guardar
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

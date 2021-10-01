@@ -1,0 +1,37 @@
+<mat-nav-list>
+  <div class="logo">
+
+    <div style="background-color: white; height: 30px; width: 100px; border-radius: 10px;">
+
+    </div>
+
+    <h6 style="color: white;">Nombre de la empresa</h6>
+  </div>
+  <!-- <mat-divider></mat-divider> -->
+
+  <div style="background-color: #11266C">
+
+    <h2 matSubheader class="mt-2">Rutas</h2>
+
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+      <mat-icon>chevron_right</mat-icon> Contenido
+    </a>
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/delivery-points">
+      <mat-icon>chevron_right</mat-icon> Cliente / Tarjetas y Usuarios
+    </a>
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/card-assignment">
+      <mat-icon>chevron_right</mat-icon>Centros de costo
+    </a>
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/dispersion">
+      <mat-icon>chevron_right</mat-icon>Puntos de Entrega
+    </a>
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/stock-card-order">
+      <mat-icon>chevron_right</mat-icon> Pedido de tarjetas stock
+    </a>
+    <a (click)='toggleSidebar()' mat-list-item routerLinkActive="list-item-active" routerLink="/increase-request">
+      <mat-icon>chevron_right</mat-icon> Pedido de  incremento
+    </a>
+  </div>
+ 
+
+</mat-nav-list>

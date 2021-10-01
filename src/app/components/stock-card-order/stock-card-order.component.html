@@ -1,0 +1,97 @@
+<div class="h-100" style="background-color: #E5E5E5;">
+
+    <div>
+
+        <div class="mx-3">
+
+            <h4 class="pt-5">PEDIDO DE TARJETAS STOCK</h4>
+
+
+            <span class="pt-3" style="font-weight: 400;">
+                Consulta
+            </span>
+        </div>
+
+        <div class="py-4 mt-3 mx-md-3" style="background-color: #ffffff;">
+
+            <form [formGroup]='form' class="container">
+                <div class="row">
+
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <label>Producto</label>
+                        <mat-form-field appearance="outline">
+                            <mat-select formControlName='product'>
+                                <mat-option *ngFor="let product of products" [value]="product.value">
+                                    {{product.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="col-12 col-sm-8 col-md-7 col-lg-6">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button class="mx-1" value="1">10</mat-radio-button>
+                            <mat-radio-button class="mx-1" value="2">50</mat-radio-button>
+                            <mat-radio-button class="mx-1" value="2">100</mat-radio-button>
+                            <mat-radio-button class="mx-1" value="2">200</mat-radio-button>
+                            <mat-radio-button class="mx-1" value="2">500</mat-radio-button>
+                            <mat-radio-button class="mx-1" value="2">Otros</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 row">
+
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <label>Nombre plastificar</label>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <mat-option *ngFor="let name of names" [value]="name.value">
+                                    {{name.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <label>Nombre plastificar 2</label>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <mat-option *ngFor="let name of names" [value]="name.value">
+                                    {{name.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <label>Observaciones factura</label>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <button type="button" style="background-color: #ffffff; color: #F5093E; border-color: #F5093E;"
+                            class="btn w-100">
+                            <div class="container d-flex justify-content-center">
+                                <span>Buscar punto de entrega</span>
+                                <mat-icon style="margin-left: .3em;">search</mat-icon>
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

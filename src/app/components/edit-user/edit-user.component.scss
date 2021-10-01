@@ -1,0 +1,51 @@
+@import "../home/home.component.scss";
+.bg-blue {
+    background-color: #11266c;
+  }
+  
+  .bg-gray {
+    background-color: #e5e5e5;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  #enterprise {
+    font-size: 1.4rem;
+    color: white;
+  }
+  #register {
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 5px;
+  }
+  ::ng-deep .mat-form-field {
+    width: 100%;
+  }
+  
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+    padding: 0.4em 0px !important;
+  }
+  ::ng-deep .mat-form-field-label-wrapper {
+    top: -1.5em;
+  }
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #11266C!important;
+  }
+  
+  ::ng-deep
+    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+    .mat-form-field-label {
+    transform: translateY(-1.1em) scale(0.75);
+    width: 133.33333%;
+  }
+  

@@ -1,0 +1,16 @@
+<mat-drawer-container *ngIf="this.currentUser">
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav (toggleSidebarForMe)="sideBarToggler()"></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <router-outlet *ngIf="this.currentUser"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<main *ngIf="!this.currentUser" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet *ngIf="!this.currentUser"  #outlet='outlet'></router-outlet>
+</main>
+

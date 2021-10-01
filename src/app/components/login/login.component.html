@@ -1,0 +1,59 @@
+<div class="container-fluid vh-100 d-flex align-items-center" style="background-color: #FFFFFF;">
+    <div class="container">
+    <div class="row justify-content-center align-items-center">
+
+        <div style="background-color: #11266C;"
+            class="rounded col-12 col-sm-8 col-md-6 col-lg-4  d-flex align-items-center flex-column py-5">
+
+            <div style=" height: 50px; width: 50px; border-radius: 50%; background-color: white;">
+
+            </div>
+
+            <span style="font-size: 1.3rem; color: #F2F2F2;">
+                NOMBRE EMPRESA
+
+            </span>
+            <form [formGroup]="loginForm" class="row">
+
+            <div class="col-12 justify-content-start">
+                <div class="form-group">
+                    <label style="color: white;" for="email">E-mail</label>
+                    <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="col-12 justify-content-start mt-3">
+                <div class="form-group">
+                    <label style="color: white;" for="password">Contraseña</label>
+                    <input  formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <button (click)='login()' type="button" style="background-color: #F5093E; color: white;" class="btn w-100">
+                    <span style="font-size: 1.3em;">
+                        Iniciar sessión
+                    </span>
+                </button>
+            </div>
+
+            <span class="my-4">
+                <a href="" style="color: white;">Recuperar Contraseña</a>
+            </span>
+
+            <div class="col-12">
+                <button type="button" routerLink="/register" style="background-color: #11266C; border-color: #F5093E;"
+                    class="btn w-100">
+                    <span style="font-size: 1.3em; color: #F5093E">
+                        Registrarse
+                    </span>
+                </button>
+            </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "admin-cards": {
+      "hosting": {
+        "admin-panel-layout": [
+          "admin-cards"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "admin-cards"
+  }
+}
