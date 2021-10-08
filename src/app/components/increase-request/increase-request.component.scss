@@ -1,34 +1,5 @@
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: white;
-    border-radius: 5px;
-  }
-  ::ng-deep .mat-form-field {
-    width: 100%;
-  }
-
+@import './../general-styles.scss';
 
   .bg-red{
     color: #F5093E;
   }
- 
-
-
-  
-  ::ng-deep .mat-form-field-flex > .mat-form-field-infix {
-    padding: 0.4em 0px !important;
-  }
-  ::ng-deep .mat-form-field-label-wrapper {
-    top: -1.5em;
-  }
-
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #11266C!important;
-}
-
-  ::ng-deep
-    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
-    .mat-form-field-label {
-    transform: translateY(-1.1em) scale(0.75);
-    width: 133.33333%;
-  }
-  

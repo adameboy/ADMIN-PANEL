@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.loginForm.value.email === 'oscar.adame@venteks.org' && this.loginForm.value.password === '123456') {
-        this.authService.login();
-    this.router.navigate(['/home']);
+      this.authService.login();
+      this.router.navigate(['/home']);
     } else {
       Swal.fire({
         title: 'Error!',
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
         confirmButtonText: 'OK'
       })
     }
-  
+
   }
 
 }

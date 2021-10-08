@@ -1,55 +1,73 @@
 <mat-toolbar>
   <mat-toolbar-row class="justify-content-end">
-    <div class="row mr-2 ml-auto">
+    <ul class="row m-0 align-items-center">
+      <li>
 
+        <div class="d-flex align-items-center">
 
+          <div class="mt-2 d-flex align-items-center mx-2">
+            <mat-icon class="blue-icon">email</mat-icon>
+          </div>
 
-      <ul class="row m-0 align-items-center">
-        <li>
-
-          <div class="d-flex align-items-center">
-
-            <div class="mt-2 d-flex align-items-center mx-2">
-              <mat-icon class="blue-icon">email</mat-icon>
-            </div>
-
-            <div class="mt-2 d-flex align-items-center mx-3">
-              <mat-icon class="blue-icon">notifications</mat-icon>
-            </div>
-            
-            <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
-            
-              <img src="./assets/user.jpg" alt="" class="user-image mr-1 p-2" />
-  
-              <span style="color: #11266C; font-weight: bold;">{{user.firstName}} {{user.lastName}}</span>
-              <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
-            </button>
-
-            <button mat-button (click)="toggleSidebar()" class="mt-2 d-flex align-items-center">
-              <mat-icon class="red-icon">menu</mat-icon>
+          <div class="mt-2 d-flex align-items-center mx-3">
+            <button mat-button [matMenuTriggerFor]="notifications" class="d-flex align-items-center">
+              <mat-icon id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                class="blue-icon">notifications</mat-icon>
             </button>
           </div>
-          
 
-
-          
-
-
-
-
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="toEdit()">
-              <mat-icon>edit</mat-icon>
-              Editar Perfil
-            </button>
-            <button mat-menu-item (click)="logout()">
-              <mat-icon>exit_to_app</mat-icon>
-              Logout
-            </button>
+          <mat-menu class="mt-3 mt-md-1" #notifications="matMenu" xPosition="before">
+            <div class="hoverclass" *ngFor="let item of data" matRipple >
+            <div class="row mx-2 my-3 d-flex align-items-center" >
+              <div class="col-2">
+                <img src="{{item.image}}" style="height: 40px; width: 40px; border-radius: 50%;" alt="">
+              </div>
+              <div class="col-9" style="margin-left: .5em;">
+                <span>
+                  {{item.text}}
+                </span>
+              </div>
+            </div>
+          </div>
           </mat-menu>
-        </li>
-        <li>
-      </ul>
-    </div>
+
+
+
+
+
+
+          <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+
+            <img src="./assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+
+            <span style="color: #11266C; font-weight: bold;">{{user.firstName}} {{user.lastName}}</span>
+            <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+          </button>
+
+          <button mat-button (click)="toggleSidebar()" class="mt-2 d-flex align-items-center">
+            <mat-icon class="red-icon">menu</mat-icon>
+          </button>
+        </div>
+
+
+
+
+
+
+
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="toEdit()">
+            <mat-icon>edit</mat-icon>
+            Editar Perfil
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </li>
+      <li>
+    </ul>
   </mat-toolbar-row>
 </mat-toolbar>

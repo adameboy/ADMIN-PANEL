@@ -18,7 +18,7 @@ export class AppComponent {
   currentUser: User;
 
   title = 'admin-panel-layout';
-  sideBarOpen = !this.device.isMobile();
+  sideBarOpen = this.device.isMobile() || this.device.isTablet()?false :true;
   
 
 

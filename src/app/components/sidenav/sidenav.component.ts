@@ -18,7 +18,7 @@ export class SidenavComponent implements OnInit {
 
   toggleSidebar() {
 
-    if(this.device.isMobile()){
+    if(this.device.isMobile() || this.device.isTablet()){
       this.toggleSidebarForMe.emit();
     }
 

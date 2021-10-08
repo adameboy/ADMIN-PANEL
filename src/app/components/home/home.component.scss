@@ -1,10 +1,38 @@
-.blue-icon{
-  color: #11266C;
+@import "./../general-styles.scss";
+
+.blue-icon {
+  color: #11266c;
 }
 
-.pointer{
+
+.pointer {
   cursor: pointer;
   user-select: none;
+}
+
+#card-font {
+  font-size: 1em;
+  color: white;
+  font-weight: 600;
+}
+.bg-white {
+  background-color: white;
+}
+
+.bg-gray {
+  background-color: #f2f2f2;
+}
+
+.date-container {
+  width: 100%;
+  border: 1px solid #11266c;
+}
+
+.card {
+  width: 230px;
+  height: 130.1px;
+  background-color: #1a1919;
+  border-radius: 15px;
 }
 
 
@@ -33,40 +61,60 @@
   }
 }
 
-.demo-table {
-  width: 100%;
+
+
+@media (max-width: 575.98px) {
+  th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+    padding-right: 10px;
+  }
+  
+  th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 10px;
+  }
+
+  .mat-column-description{
+    width: 50%;
+  }
+  
 }
 
-.table-responsive {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  .mat-table {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      display: table;
-      border-collapse: collapse;
-      margin: 0px;
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .card {
+    height: 135px;
+    width: 260px;
   }
-  .mat-row,
-  .mat-header-row {
-      display: table-row;
+  .mat-column-description{
+    width: 60%;
   }
-  .mat-cell,
-  .mat-header-cell {
-      word-wrap: initial;
-      display: table-cell;
-      padding: 0px 20px;
-      line-break: unset;
-      width: auto;
-      white-space: nowrap;
-      overflow: hidden;
-      vertical-align: middle;
+  .mat-column-amount{
+    width: 20%;
+  }
+  .mat-column-date{
+    width: 20%;
   }
 }
 
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
-.grow2 { transition: all .2s ease-in-out; }
-.grow2:hover { transform: scale(1.5); }
+@media (min-width: 1600px) {
+  .card {
+    height: 150px;
+    width: 288.5px;
+  }
+  #card-font {
+    font-size: 1.12em;
+  }
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+.grow2 {
+  transition: all 0.2s ease-in-out;
+}
+.grow2:hover {
+  transform: scale(1.5);
+}

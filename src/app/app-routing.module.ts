@@ -10,6 +10,7 @@ import { DeliveryPointsComponent } from './components/delivery-points/delivery-p
 import { StockCardOrderComponent } from './components/stock-card-order/stock-card-order.component';
 import { DispersionComponent } from './components/dispersion/dispersion.component';
 import { IncreaseRequestComponent } from './components/increase-request/increase-request.component';
+import { LoggedInAuthGuard } from './_helpers/loggedInWard.guard';
 
 // const routes: Routes = [
 //   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,9 +29,8 @@ const routes: Routes = [
   { path: 'stock-card-order', component: StockCardOrderComponent,canActivate:[AuthGuard]},
   { path: 'increase-request', component: IncreaseRequestComponent,canActivate:[AuthGuard]},
   { path: 'dispersion', component: DispersionComponent,canActivate:[AuthGuard]},
-  { path: 'login', component: LoginComponent,data:{animation:'isLeft'}  },
-  { path: 'register', component: RegisterComponent,data:{animation:'isRight'}  },
-
+  { path: 'login', component: LoginComponent,canActivate:[LoggedInAuthGuard], data:{animation:'isLeft'}  },
+  { path: 'register', component: RegisterComponent,canActivate:[LoggedInAuthGuard], data:{animation:'isRight'}  },
   { path: '**', redirectTo: '' }
 
 ];

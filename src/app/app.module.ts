@@ -18,7 +18,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatNativeDateModule,MatRippleModule} from '@angular/material/core';
 import { MatListModule } from '@angular/material/list';
 import {MatTable, MatTableModule} from '@angular/material/table';
 import { RegisterComponent } from './components/register/register.component';
@@ -33,6 +33,8 @@ import { DeliveryPointsComponent } from './components/delivery-points/delivery-p
 import { StockCardOrderComponent } from './components/stock-card-order/stock-card-order.component';
 import { DispersionComponent } from './components/dispersion/dispersion.component';
 import { IncreaseRequestComponent } from './components/increase-request/increase-request.component';
+import { LoggedInAuthGuard } from './_helpers/loggedInWard.guard';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { IncreaseRequestComponent } from './components/increase-request/increase
     SweetAlert2Module,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCarouselModule.forRoot(),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -73,8 +76,9 @@ import { IncreaseRequestComponent } from './components/increase-request/increase
     MatDividerModule,
     MatListModule,
     MatRadioModule,
+    MatRippleModule
   ],
-  providers: [DatePipe,DecimalPipe],
+  providers: [DatePipe,DecimalPipe,LoggedInAuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
