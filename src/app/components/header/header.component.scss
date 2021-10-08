@@ -10,6 +10,10 @@ ul {
   }
 }
 
+.example::-webkit-scrollbar {
+  display: none;
+}
+
 .red-icon{
   color: #F5093E;
 }
@@ -44,7 +48,10 @@ mat-toolbar {
 
 ::ng-deep .mat-menu-panel {
   max-height: 300px !important;
+  max-width: 300px !important;
 }
+
+
 
 @media (max-width: 575.98px) {
   .mat-toolbar-row, .mat-toolbar-single-row{

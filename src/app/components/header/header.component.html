@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar >
   <mat-toolbar-row class="justify-content-end">
     <ul class="row m-0 align-items-center">
       <li>
@@ -16,19 +16,20 @@
             </button>
           </div>
 
-          <mat-menu class="mt-3 mt-md-1" #notifications="matMenu" xPosition="before">
-            <div class="hoverclass" *ngFor="let item of data" matRipple >
-            <div class="row mx-2 my-3 d-flex align-items-center" >
-              <div class="col-2">
-                <img src="{{item.image}}" style="height: 40px; width: 40px; border-radius: 50%;" alt="">
-              </div>
-              <div class="col-9" style="margin-left: .5em;">
-                <span>
-                  {{item.text}}
-                </span>
+          <mat-menu  class="mt-3 mt-md-1" #notifications="matMenu" xPosition="before">
+            <div class="hoverclass" *ngFor="let item of data" matRipple>
+              <div class="row mx-2 my-3 d-flex align-items-center">
+                <div class="col-2">
+                  <img src="{{item.image}}" style="height: 40px; width: 40px; border-radius: 50%;" alt="">
+                </div>
+                <div class="col-9" style="margin-left: .5em;">
+                  <span>
+                    {{item.text}}
+                  </span>
+                  <span class="d-block" style="color: #c5c5a6; font-size: 12px;">hace unos minutos</span>
+                </div>
               </div>
             </div>
-          </div>
           </mat-menu>
 
 
